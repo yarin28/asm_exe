@@ -75,6 +75,7 @@ after_b_g_c	p21e5.asm	/^  after_b_g_c:$/;"	l
 after_b_g_d	p21e5.asm	/^  after_b_g_d:$/;"	l
 after_c_g_d	p21e5.asm	/^  after_c_g_d:$/;"	l
 arr	p40e5.asm	/^arr db 3,24,4,2,9,67,0,1,67,9,2,19,24,3$/;"	d
+arr	p40e7.asm	/^arr db 1, "y", "@", "2" ,3, "x", "y", "z",db 100 dup (0)$/;"	d
 b	p21e5.asm	/^b db 2$/;"	d
 b_bigger	p21e2.asm	/^  b_bigger:$/;"	l
 b_bigger	p21e3.asm	/^  b_bigger:$/;"	l
@@ -96,6 +97,7 @@ code	p21e3.asm	/^code segment$/;"	l
 code	p21e4.asm	/^code segment$/;"	l
 code	p21e8.asm	/^code segment$/;"	l
 code	p40e5.asm	/^code segment$/;"	l
+code	p40e7.asm	/^code segment$/;"	l
 code	wp2.asm	/^code segment$/;"	l
 code	wpage1.asm	/^code segment$/;"	l
 cseg	p21e5.asm	/^cseg segment$/;"	l
@@ -108,9 +110,11 @@ data	p21e3.asm	/^data segment$/;"	l
 data	p21e4.asm	/^data segment$/;"	l
 data	p21e8.asm	/^data segment$/;"	l
 data	p40e5.asm	/^data segment$/;"	l
+data	p40e7.asm	/^data segment$/;"	l
 data	wp2.asm	/^data segment$/;"	l
 data	wpage1.asm	/^data segment$/;"	l
 db	p40e5.asm	/^db 256 dup(0)$/;"	l
+db	p40e7.asm	/^db 100h dup(0)$/;"	l
 dec	p40e5.asm	/^    dec di$/;"	d
 doesnt_match	p20e1.asm	/^  doesnt_match:$/;"	l
 doesnt_match2	p20e1.asm	/^  doesnt_match2:$/;"	l
@@ -122,6 +126,7 @@ exit	p21e3.asm	/^  exit:$/;"	l
 exit	p21e4.asm	/^  exit:$/;"	l
 exit	p21e8.asm	/^  exit:$/;"	l
 exit	p40e5.asm	/^  exit:$/;"	l
+exit	p40e7.asm	/^  exit:$/;"	l
 fA	p20e1.asm	/^  fA db 0$/;"	d
 fB	p20e1.asm	/^  fB db 0$/;"	d
 good	p21e4.asm	/^  good:$/;"	l
@@ -147,6 +152,7 @@ mov	p21e8.asm	/^    mov ds, ax$/;"	d
 mov	p40e5.asm	/^    mov di,bx$/;"	d
 mov	p40e5.asm	/^    mov ds, ax$/;"	d
 mov	p40e5.asm	/^  mov di,[ bp+4 ]$/;"	d
+mov	p40e7.asm	/^    mov ds, ax$/;"	d
 mov	wp2.asm	/^    mov ds, ax$/;"	d
 mov	wpage1.asm	/^    mov ds, ax$/;"	d
 pop	p40e5.asm	/^  pop di$/;"	d
@@ -156,6 +162,7 @@ s	p21e8.asm	/^s db 0$/;"	d
 stack	base.asm	/^stack segment$/;"	l
 stack	factorial.asm	/^stack segment$/;"	l
 stack	p40e5.asm	/^stack segment$/;"	l
+stack	p40e7.asm	/^stack segment$/;"	l
 stack	wpage1.asm	/^stack segment$/;"	l
 start	dsmap.asm	/^start:$/;"	l
 start	factorial.asm	/^start:  $/;"	l
@@ -166,6 +173,7 @@ start	p21e4.asm	/^start:$/;"	l
 start	p21e5.asm	/^start:  mov ax,dseg$/;"	l
 start	p21e8.asm	/^start:$/;"	l
 start	p40e5.asm	/^start:$/;"	l
+start	p40e7.asm	/^start:$/;"	l
 start	wp2.asm	/^start:$/;"	l
 start	wpage1.asm	/^start:$/;"	l
 xend_first_if	p40e5.asm	/^    xend_first_if:$/;"	l
