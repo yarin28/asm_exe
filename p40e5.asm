@@ -87,6 +87,7 @@ start:
     dec di
     lea bx,arr
     cmp si,[len]
+    loop1:
     je xend_loop
     push di
     push  si
@@ -108,6 +109,7 @@ start:
     xend_first_if:
     dec di
     inc si
+    jmp loop1
   xend_loop:
 
   exit:

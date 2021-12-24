@@ -131,6 +131,7 @@ inc	p40e5.asm	/^    inc dx$/;"	d
 input	p21e8.asm	/^input db 0$/;"	d
 len	p40e5.asm	/^len dw $-arr$/;"	d
 lev	p40e5.asm	/^lev dw 0$/;"	d
+loop1	p40e5.asm	/^    loop1:$/;"	l
 m	p21e8.asm	/^m db 0$/;"	d
 min	p21e3.asm	/^min db 0$/;"	d
 mov	base.asm	/^    mov ds, ax$/;"	d
