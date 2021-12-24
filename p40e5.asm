@@ -86,8 +86,8 @@ start:
     mov si,di
     dec di
     lea bx,arr
-    cmp si,[len]
     loop1:
+    cmp si,[len]
     je xend_loop
     push di
     push  si
