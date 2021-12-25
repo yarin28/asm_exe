@@ -30,8 +30,43 @@ code segment
 
 
 endp extract
-exchange proc
+push_the_rest_of_array proc
 
+
+  push bp
+  mov bp,sp
+  push ax
+  push bx
+  push si
+  push di
+  mov di,bx
+  add di,cx
+  dec di; add this later
+  mov si,cx
+  ;inc bx; now is the poitner to the value of the first num (toe one to be repeted by the extraction)
+
+  inc bx ;now in the next element of the string that will be sent the all way to the back
+  cmp si,0
+  je end_exchange_proc
+  looop_to_si:
+  mov al,byte ptr [bx]
+  mov [di],al
+  inc bx
+  inc di
+  dec si
+  cmp si,0
+  jne looop_to_si
+
+
+end_exchange_proc:
+  pop di
+  pop si
+  pop bx
+  pop ax
+  pop bp
+  ret
+
+endp push_the_rest_of_array
 duplicate_the_num proc
 push bp
 mov bp,sp
