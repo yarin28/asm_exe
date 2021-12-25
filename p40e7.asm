@@ -17,12 +17,15 @@ code segment
   push ax
   push cx
   push dx
-  inc bx
+  xor cx,cx
   mov cl,byte ptr [bx]
+  mov dl, byte ptr [ bx+1 ]
+  call push_the_rest_of_array
+  call duplicate_the_num
   loop_to_the_second_number:
-  
 
-  loop loop_to_the_second_number
+
+
 
 
   pop dx
