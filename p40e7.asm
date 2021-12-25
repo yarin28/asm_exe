@@ -32,19 +32,34 @@ code segment
 endp extract
 exchange proc
 
-  push bp
-  mov bp,sp
-  push ax
-  push cx
-  push dx
-  
-  pop dx
-  pop cx
-  pop ax
-  pop bp
-  ret
+duplicate_the_num proc
+push bp
+mov bp,sp
+push ax
+push bx
+push cx
+push dx
+push si
+dec bx
+mov al , byte ptr[bx+1]
+;for(cx,cx>0;cx++)
+;{
+;  [bx]=ax
+;}
+dloop1:
+  mov [bx],al
+  inc bx
+  loop dloop1
 
-endp exchange
+pop si
+pop dx
+pop cx
+pop bx
+pop ax
+pop bp
+ret
+
+endp duplicate_the_num
 
 start:
     mov ax, data
