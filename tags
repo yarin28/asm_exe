@@ -69,13 +69,14 @@ a_biggest	p21e2.asm	/^  a_biggest:$/;"	l
 a_biggest	p21e3.asm	/^  a_biggest:$/;"	l
 a_g_b	p21e5.asm	/^  a_g_b:$/;"	l
 a_g_c	p21e5.asm	/^  a_g_c:$/;"	l
+add	p40e7.asm	/^  add di,cx$/;"	d
 after_a_g_b	p21e5.asm	/^  after_a_g_b:$/;"	l
 after_a_g_c	p21e5.asm	/^  after_a_g_c:$/;"	l
 after_b_g_c	p21e5.asm	/^  after_b_g_c:$/;"	l
 after_b_g_d	p21e5.asm	/^  after_b_g_d:$/;"	l
 after_c_g_d	p21e5.asm	/^  after_c_g_d:$/;"	l
 arr	p40e5.asm	/^arr db 3,24,4,2,9,67,0,1,67,9,2,19,24,3$/;"	d
-arr	p40e7.asm	/^arr db 1, "y", "@", "2" ,3, "x", "y", "z",db 100 dup (0)$/;"	d
+arr	p40e7.asm	/^arr db "1y@23xyz",db 100 dup(0)$/;"	d
 b	p21e5.asm	/^b db 2$/;"	d
 b_bigger	p21e2.asm	/^  b_bigger:$/;"	l
 b_bigger	p21e3.asm	/^  b_bigger:$/;"	l
@@ -116,9 +117,13 @@ data	wpage1.asm	/^data segment$/;"	l
 db	p40e5.asm	/^db 256 dup(0)$/;"	l
 db	p40e7.asm	/^db 100h dup(0)$/;"	l
 dec	p40e5.asm	/^    dec di$/;"	d
+dec	p40e7.asm	/^dec bx$/;"	l
+dloop1	p40e7.asm	/^dloop1:$/;"	l
 doesnt_match	p20e1.asm	/^  doesnt_match:$/;"	l
 doesnt_match2	p20e1.asm	/^  doesnt_match2:$/;"	l
 dseg	p21e5.asm	/^dseg segment$/;"	l
+duplicate_the_num	p40e7.asm	/^duplicate_the_num proc$/;"	l
+end_exchange_proc	p40e7.asm	/^end_exchange_proc:$/;"	l
 exit	dsmap.asm	/^  exit:$/;"	l
 exit	p20e1.asm	/^  exit:$/;"	l
 exit	p21e2.asm	/^  exit:$/;"	l
@@ -127,16 +132,22 @@ exit	p21e4.asm	/^  exit:$/;"	l
 exit	p21e8.asm	/^  exit:$/;"	l
 exit	p40e5.asm	/^  exit:$/;"	l
 exit	p40e7.asm	/^  exit:$/;"	l
+extract	p40e7.asm	/^ extract proc$/;"	l
 fA	p20e1.asm	/^  fA db 0$/;"	d
 fB	p20e1.asm	/^  fB db 0$/;"	d
 good	p21e4.asm	/^  good:$/;"	l
 h	p21e8.asm	/^h db 0$/;"	d
 hathala	base.asm	/^hathala:$/;"	l
 inc	p40e5.asm	/^    inc dx$/;"	d
+inc	p40e7.asm	/^  inc di$/;"	d
 input	p21e8.asm	/^input db 0$/;"	d
 len	p40e5.asm	/^len dw $-arr$/;"	d
+len	p40e7.asm	/^len dw $-arr$/;"	d
 lev	p40e5.asm	/^lev dw 0$/;"	d
+looop_to_si	p40e7.asm	/^  looop_to_si:$/;"	l
 loop1	p40e5.asm	/^    loop1:$/;"	l
+loop_for_extraction	p40e7.asm	/^    loop_for_extraction:$/;"	l
+loop_to_the_second_number	p40e7.asm	/^  loop_to_the_second_number:$/;"	l
 m	p21e8.asm	/^m db 0$/;"	d
 min	p21e3.asm	/^min db 0$/;"	d
 mov	base.asm	/^    mov ds, ax$/;"	d
@@ -153,11 +164,33 @@ mov	p40e5.asm	/^    mov di,bx$/;"	d
 mov	p40e5.asm	/^    mov ds, ax$/;"	d
 mov	p40e5.asm	/^  mov di,[ bp+4 ]$/;"	d
 mov	p40e7.asm	/^    mov ds, ax$/;"	d
+mov	p40e7.asm	/^  mov di,bx$/;"	d
+mov	p40e7.asm	/^  mov dl, byte ptr [ bx+1 ]$/;"	d
+mov	p40e7.asm	/^mov al , byte ptr[bx+1]$/;"	l
+mov	p40e7.asm	/^mov bp,sp$/;"	l
 mov	wp2.asm	/^    mov ds, ax$/;"	d
 mov	wpage1.asm	/^    mov ds, ax$/;"	d
 pop	p40e5.asm	/^  pop di$/;"	d
+pop	p40e7.asm	/^  pop di$/;"	d
+pop	p40e7.asm	/^  pop dx$/;"	d
+pop	p40e7.asm	/^pop ax$/;"	l
+pop	p40e7.asm	/^pop bp$/;"	l
+pop	p40e7.asm	/^pop bx$/;"	l
+pop	p40e7.asm	/^pop cx$/;"	l
+pop	p40e7.asm	/^pop dx$/;"	d
+pop	p40e7.asm	/^pop si$/;"	l
 push	p40e5.asm	/^    push di$/;"	d
 push	p40e5.asm	/^  push di$/;"	d
+push	p40e7.asm	/^  push di$/;"	d
+push	p40e7.asm	/^  push dx$/;"	d
+push	p40e7.asm	/^push ax$/;"	l
+push	p40e7.asm	/^push bp$/;"	l
+push	p40e7.asm	/^push bx$/;"	l
+push	p40e7.asm	/^push cx$/;"	l
+push	p40e7.asm	/^push dx$/;"	d
+push	p40e7.asm	/^push si$/;"	l
+push_the_rest_of_array	p40e7.asm	/^push_the_rest_of_array proc$/;"	l
+ret	p40e7.asm	/^ret$/;"	l
 s	p21e8.asm	/^s db 0$/;"	d
 stack	base.asm	/^stack segment$/;"	l
 stack	factorial.asm	/^stack segment$/;"	l
