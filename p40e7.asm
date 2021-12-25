@@ -1,3 +1,4 @@
+; exe - https://imgur.com/a/LNYd5Dw
 data segment
 arr db "1y@23xyz",db 100 dup(0)
 len dw $-arr
@@ -8,6 +9,8 @@ ends
 code segment
   assume ds:data
   assume cs:code
+ ;cl - the amount to be repeted
+ ;dl - the char to be repted
  extract proc
   push bp
   mov bp,sp
@@ -30,6 +33,7 @@ code segment
 
 
 endp extract
+  ; proc to push all the elements after the the number of tines the number -2 places fowerd( why 2 places? because there is the @, number ,the number itself )
 push_the_rest_of_array proc
 
 
@@ -109,7 +113,7 @@ start:
       je found_the_@
       jmp didnt_found_the_@
     found_the_@:
-    inc bx
+    inc bx; moving bx to the number of thines to be repeted
     call extract
     didnt_found_the_@:
       inc bx
